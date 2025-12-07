@@ -124,6 +124,12 @@ a {
     text-align: center;
 }
 
+/* Show corrected hero title and hide the original garbled one */
+.hero-content h2.hero-title:first-of-type { display: none; }
+
+/* In problem solution, hide the second paragraph (original text) */
+.problem-solution p + p { display: none; }
+
 .hero-suby {
     background-color: var(--accent-color);
     color: var(--white);
