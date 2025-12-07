@@ -1,10 +1,17 @@
 *** Begin Patch
 *** Update File: style.css
 @@
- .hero-content {
-     position: relative;
-     z-index: 10;
-     width: 100%;
-+    text-align: center;
+ .logo {
+     font-size: 1.25rem;
+     font-weight: 700;
+     color: var(--primary-color);
+     letter-spacing: 0.05em;
  }
++
++.header-note {
++    font-size: 0.8rem;
++    color: #666;
++    margin-left: 12px;
++    font-weight: 500;
++}
 *** End Patch
