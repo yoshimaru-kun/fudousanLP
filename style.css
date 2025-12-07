@@ -125,10 +125,15 @@ a {
 }
 
 /* Show corrected hero title and hide the original garbled one */
-.hero-content h2.hero-title:first-of-type { display: none; }
+/* Hide all default hero titles; show corrected one */
+.hero-content h2.hero-title { display: none; }
+.hero-content h2.hero-title.hero-title--clean { display: block; }
 
 /* In problem solution, hide the second paragraph (original text) */
-.problem-solution p + p { display: none; }
+/* Hide all default problem-solution text; show corrected one */
+.problem-solution p { display: none; }
+.problem-solution p.text-clean { display: none; }
+.problem-solution p.text-clean:first-of-type { display: block; }
 
 .hero-suby {
     background-color: var(--accent-color);
@@ -181,9 +186,10 @@ a {
     background-color: var(--accent-color);
 }
 
-/* Hide original section titles when duplicating for copy fixes */
+/* Hide original reasons titles; show clean version */
 .problem h3.section-title:first-of-type { display: none; }
-.reasons h3.section-title:first-of-type { display: none; }
+.reasons h3.section-title { display: none; }
+.reasons h3.section-title.section-title--clean { display: block; }
 
 .text-center {
     text-align: center;
@@ -378,6 +384,70 @@ a {
     margin-top: 1rem;
     font-size: 0.85rem;
     opacity: 0.8;
+}
+
+.affiliate-note {
+    margin-top: 0.6rem;
+    font-size: 0; /* hide original text width */
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px; /* tighten space between icon and text */
+    padding: 8px 14px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    color: transparent;
+    position: relative;
+    line-height: 1;
+}
+
+.affiliate-note::before {
+    content: '⚠︎';
+    color: var(--accent-color);
+    font-size: 1rem;
+}
+
+.affiliate-note::after {
+    content: '＊当サイトのリンクは広告を含みます。';
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+/* Make the affiliate disclosure (the second note in hero) more prominent */
+.hero-content .cta-note + .cta-note {
+    opacity: 1;
+    font-size: 0.95rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    position: relative;
+    color: transparent; /* hide original text */
+}
+
+.hero-content .cta-note + .cta-note::before {
+    content: '⚠︎';
+    color: var(--accent-color);
+}
+
+.hero-content .cta-note + .cta-note::after {
+    content: '＊当サイトのリンクは広告を含みます。';
+    color: #fff;
+}
+
+/* Hide the affiliate disclosure note (second hero note) */
+.hero-content .cta-note + .cta-note,
+.hero-content .cta-note + .cta-note::before,
+.hero-content .cta-note + .cta-note::after {
+    display: none !important;
+    content: none !important;
 }
 
 /* Footer */

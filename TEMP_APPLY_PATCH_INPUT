@@ -1,17 +1,6 @@
 *** Begin Patch
-*** Update File: style.css
+*** Update File: index.html
 @@
- .logo {
-     font-size: 1.25rem;
-     font-weight: 700;
-     color: var(--primary-color);
-     letter-spacing: 0.05em;
- }
-+
-+.header-note {
-+    font-size: 0.8rem;
-+    color: #666;
-+    margin-left: 12px;
-+    font-weight: 500;
-+}
+-        <section class=\"reasons\">\n            <div class=\"container\">\n                <h3 class=\"section-title text-center\">‘I‚Î‚ê‘±‚¯‚ßEspan class=\"text-gold\">3‚Â‚Ì?E??</span></h3>\n                <h3 class=\"section-title text-center\">‚²Ğ‰îŠé‹Æ‚ª‘I‚Î‚ê‘±‚¯‚ßEspan class=\"text-gold\">3‚Â‚Ì?E??</span></h3>\n                <div class=\"reasons-grid\">
++        <section class=\"reasons\">\n            <div class=\"container\">\n                <h3 class=\"section-title section-title--clean text-center\">‚²Ğ‰îŠé‹Æ‚ª‘I‚Î‚ê‘±‚¯‚é<span class=\"text-gold\">3‚Â‚Ì“Á’¥</span></h3>\n                <div class=\"reasons-grid\">
 *** End Patch
