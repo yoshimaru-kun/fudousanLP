@@ -1,0 +1,10 @@
+*** Begin Patch
+*** Update File: style.css
+@@
+ .hero-content {
+     position: relative;
+     z-index: 10;
+     width: 100%;
++    text-align: center;
+ }
+*** End Patch
